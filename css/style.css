@@ -1,0 +1,83 @@
+.box{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    color: aliceblue;
+    font-size: 30px;
+    /* background-color: rgba(31, 7, 59,0.6); */
+    /* background-color: hsla(0, 100%, 50%, 1); */
+    /* linear-gradient - độ dốc tuyển tính */
+    /* background: linear-gradient(135deg,red,purple,yellow); */
+    /* radial-gradient  - độ đốc xuyên tâm */
+    background: radial-gradient(circle at top,red,purple,yellow);
+    
+    /* opacity: 0.5; */
+    border-radius: 50%;
+    /*  Đổ bóng */
+    box-shadow: 10px 0px 2px 0px black;
+
+}
+.heading{
+    font-size: 50px;
+    margin-top: 90px;
+    font-weight: 900;
+    text-shadow: 8px -5px 4px blueviolet;
+}
+.img{
+    width: 500px;
+    height: 400px;
+    background:right url(/image/th.jpg) no-repeat ,bottom url(/image/th1.jpg) no-repeat , url(/image/th2.jpg) no-repeat;
+   
+}
+.element{
+    width: 100px;
+    background-color: burlywood;
+    margin-top: 20px;
+    text-align: center;
+    /* xoay phần tử */
+    /* transform: rotate(90deg) scale(4); */
+    /* transform: scale(1); */
+    /* transform: skew(45deg); */
+    /* transform: translate(100px,100px); */
+
+}
+.transition{
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(29, 152, 186);
+    text-align: center;
+    line-height: 200px;
+    /* transition: all 30s ease-in-out; */
+    /* transition-delay: 1s; */
+    background: url(/image/th1.jpg);
+    border-radius: 50%;
+    animation: move_infinite 3s ease-in-out
+     1s infinite;
+}
+/* tạo 1 khối hình chữ nhật và 
+1 hình vuông ở bên trong chạy
+ xung quanh cách cạnh của
+  hình chữ nhật đó */
+/* .transition:hover{
+    /* width: 400px;
+    height: 400px;
+    line-height: 400px;
+    opacity: 0; */
+    /* transform: translate(300px);
+    transform: rotate(180000deg); */
+
+/* } */ 
+
+@keyframes move_infinite{
+    0%{
+        transform: translate(0px);
+    }
+    50%{
+        transform:scale(-1) translate(-500px);
+    }
+    100%{
+        transform: translate(0px);
+    }
+}
