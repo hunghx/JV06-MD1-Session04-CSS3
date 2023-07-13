@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bt4.css">
+    <style>
+        .clock,.box1,.box2{
+            position: absolute;
+            top: 0;
+            border-radius: 50%;
+            border: 10px solid rgb(107, 37, 12);
+            width: 100px;
+            height: 100px;
+            /* animation:roles 5s linear infinite ; */
+        }
+        .box1{
+             animation:roles 60s linear infinite ;
+        }
+        .box2{
+             animation:roles 12s linear infinite ;
+        }
+        .clock > .dot{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgb(107, 37, 12);
+            transform: translate(-50%,-50%);
+        }
+        .hour{
+                width: 5px;
+                height: 30px;
+                border-radius: 10px;
+                background-color: rgb(27, 3, 3);
+                transform:translate(57px,26px) rotate(45deg) ;
+        }
+        .minutes{
+            width: 5px;
+                height: 40px;
+                border-radius: 10px;
+                background-color: rgb(27, 3, 3);
+                transform:translate(60px,43px) rotate(135deg) ;
+        }
+        @keyframes roles{
+            0%{
+                transform: rotate(0);
+            }
+           
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="dot"></div>
+    </div>
+    <div class="box1"> <div class="hour"></div></div>
+    <div class="box2"><div class="minutes"></div></div>
+</body>
+</html>
